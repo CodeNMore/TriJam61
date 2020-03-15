@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/sheet.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Bld.gd" type="Script" id=2]
+
+[node name="Bld4" type="Area2D"]
+position = Vector2( 0, -181.447 )
+script = ExtResource( 2 )
+yPos = 300
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 387, 116, 122, 363 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -61.3958, 181.319, -31.0271, -159.78, -18.7813, -159.423, -18.8711, -163.282, -17.0762, -163.371, -11.512, -176.564, -6.03754, -163.551, -3.97341, -163.461, -3.97341, -159.692, 8.0524, -159.423, 8.0524, -180.513, 9.12934, -180.513, 9.12934, -159.333, 22.0526, -159.423, 21.9629, -161.666, 23.0398, -161.487, 23.1295, -167.589, 27.527, -163.82, 27.6168, -159.512, 30.9373, -159.512, 61.1202, 181.286 )
+[connection signal="area_entered" from="." to="." method="_on_bld_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_bld_area_exited"]
